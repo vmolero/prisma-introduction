@@ -1,19 +1,14 @@
 {
-  "name": "prisma-introduction",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "@prisma/cli": "^2.1.1",
+    "@prisma/client": "^2.1.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vmolero/prisma-introduction.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vmolero/prisma-introduction/issues"
-  },
-  "homepage": "https://github.com/vmolero/prisma-introduction#readme"
+    "dev": "ts-node src/index.ts"
+  }
 }

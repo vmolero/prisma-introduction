@@ -1,0 +1,27 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: root
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+        - prisma_network
+  
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+        - 8080:8080
+    networks:
+        - prisma_network
+volumes:
+  pgdata: {}
+
+networks:
+  prisma_network:
